@@ -1,0 +1,121 @@
+int a = 5;
+int b = 3;
+int c = a + b;
+
+
+bool myTest = c > 10;
+
+if (myTest)
+{
+    Console.WriteLine("MyTest is greater than 10");
+}
+else
+{
+    Console.WriteLine("MyTest is not greater than 10");
+}
+
+// The above code checks if the variable c is greater than 10. If it is, it prints "MyTest is greater than 10" to the console. If not, it prints "MyTest is not greater than 10". In this case, since c is equal to 8 (5 + 3), the output will be "MyTest is not greater than 10".
+
+if (myTest)
+{
+    Console.WriteLine("MyTest is greater than 10");
+}
+else
+{
+    Console.WriteLine("MyTest is not greater than 10");
+}
+else if (c == 8)
+{
+    Console.WriteLine("MyTest is equal to 8");
+}
+else
+{
+    Console.WriteLine("MyTest is not greater than 10 and not equal to 8");
+}
+// The above code checks if the variable c is greater than 10. If it is, it prints "MyTest is greater than 10" to the console. If not, it checks if c is equal to 8. If it is, it prints "MyTest is equal to 8". If neither condition is met, it prints "MyTest is not greater than 10 and not equal to 8". In this case, since c is equal to 8 (5 + 3), the output will be "MyTest is equal to 8".
+
+
+
+if ((a + b + c > 10) && (a == 5))
+{
+    Console.WriteLine("MyTest is greater than 10 and a is equal to 5");
+}
+else if ((a + b + c > 10) || a == 5)
+{
+    Console.WriteLine("MyTest is greater than 10 or a is equal to 5");
+}
+else
+{
+    Console.WriteLine("MyTest is not greater than 10 and a is not equal to 5");
+}
+//composit if statements above where its a if and a and statement double && and a or statement double ||. The first if statement checks if the sum of a, b, and c is greater than 10 and if a is equal to 5. If both conditions are true, it prints "MyTest is greater than 10 and a is equal to 5". If not, it checks if either condition is true using the || operator. If either condition is true, it prints "MyTest is greater than 10 or a is equal to 5". If neither condition is met, it prints "MyTest is not greater than 10 and a is not equal to 5". In this case, since c is equal to 8 (5 + 3), the output will be "MyTest is not greater than 10 and a is not equal to 5".
+//
+// The && operator is used to check if both conditions are true, while the || operator is used to check if at least one condition is true. This allows you to create more complex conditional statements in your code.
+
+
+
+int counter = 0;
+
+while (counter < 5)
+{
+    counter++;
+    Console.WriteLine(counter);
+}
+// The above code uses a while loop to increment the variable counter from 0 to 5. The loop continues as long as the condition counter < 5 is true. Inside the loop, the counter is incremented by 1 using the counter++ statement, and the current value of counter is printed to the console using Console.WriteLine(counter). The output will be:
+// ++means add 1 to the counter.
+
+
+
+//do loop
+int counter = 0;
+do
+{
+    Console.WriteLine(counter);
+    counter++;
+}
+
+while (counter < 5);
+
+// This reads better as it will run the code inside the do loop at least once before checking the condition. The output will be the same as the while loop, printing the values from 0 to 4. The difference is that even if the condition is false initially, the code inside the do block will still execute once before checking the condition.
+
+
+for loops
+
+for (
+    int i = 0; // intialization (start)
+     i < 5;    // condition (end)
+     i++)      // increment (step)
+    {
+        Console.WriteLine(i); // body of the loop
+    }
+
+//
+
+ifs in loops
+for (int i = 0; i < 5; i++)
+{
+    if (i == 6)
+        Console.WriteLine(i); // body of the loop
+    else
+        Console.WriteLine("Not 6"); // body of the loop
+}
+
+nested for loops
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 5; j++)
+    {
+        Console.WriteLine($"i: {i}, j: {j}"); // body of the loop
+    }
+}
+
+foreach loop
+
+var names = new list<string> { "David", "Sage", "Maria" };
+
+for each(var name in names)
+{
+    Console.WriteLine(name);
+}
+// // The above code creates a list of strings called names and initializes it with three names: "David", "Sage", and "Maria". Then, it uses a foreach loop to iterate through each name in the list. Inside the loop, it prints each name to the console. The output will be:
+

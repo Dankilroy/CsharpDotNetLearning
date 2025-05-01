@@ -1,0 +1,40 @@
+var names = new list<string> { "David", "Sage", "Maria" };
+
+for each(var name in names)
+{
+    Console.WriteLine($" Hello {name}!");
+}
+// // The above code creates a list of strings called names and initializes it with three names: "David", "Sage", and "Maria". Then, it uses a foreach loop to iterate through each name in the list. Inside the loop, it prints each name to the console. The output will be:
+
+
+Add and remove from lists
+
+var names = new List<string> { "David", "Sage", "Maria" };
+names.Add("Michael");
+names.Remove("Sage");
+
+foreach (var name in names)
+{
+    Console.WriteLine($"Hello {name}!");
+}
+
+// // The above code creates a list of strings called names and initializes it with three names: "David", "Sage", and "Maria". Then, it adds "Michael" to the list and removes "Sage". Finally, it uses a foreach loop to iterate through each name in the updated list and prints each name to the console. The output will be:
+
+sorting lists:
+var names = new List<string> { "David", "Sage", "Maria" };
+
+names.Sort();
+
+
+sorting numbers
+var numbers = new List<int> { 5, 2, 8, 1, 4 };
+numbers.Sort();
+Console.WriteLine($"i found 8 at index {numbers.IndexOf(8)}");
+
+// // The above code creates a list of integers called numbers and initializes it with five numbers: 5, 2, 8, 1, and 4. Then, it sorts the list in ascending order using the Sort() method. Finally, it prints the index of the number 8 in the sorted list using the IndexOf() method. The output will be:
+
+
+
+
+
+

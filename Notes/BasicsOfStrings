@@ -1,0 +1,51 @@
+Console.WriteLine("Hello, David");
+
+
+string firsFriend = "Maria";
+string secondFriend = "Sage";
+
+console.WriteLine($"My first friend is {firsFriend} and my second friend is {secondFriend}.");
+
+
+//Above the $ is used to indicate that the string is an interpolated string (basically means it substitutues the string values). This allows you to insert variables directly into the string using curly braces {}. The variables firsFriend and secondFriend are replaced with their values in the output.
+
+
+string firstFriend = "   David!   ";
+
+Console.WriteLine($"My first friend is {firstFriend.Trim()} and my second friend is {secondFriend}.");
+
+// The Trim() method is used to remove any leading or trailing whitespace from the string. In this case, it removes the extra spaces before and after "David!" so that the output is cleaner.
+// Can also be done for Start and end of the string using TrimStart() and TrimEnd() methods respectively.
+// The Trim() method is useful when you want to ensure that the string is formatted correctly without any unnecessary spaces. It helps in cleaning up user input or formatting strings for display purposes.
+
+
+string friends = "Sage, David,";
+
+Console.WriteLine(friends.Replace("David", "Michael"));
+
+// The Replace() method is used to replace all occurrences of a specified substring with another substring. In this case, it replaces "David" with "Michael" in the string "Sage, David,". The output will be "Sage, Michael,". This is useful for updating or modifying strings based on certain criteria or user input.
+// The Replace() method is commonly used for string manipulation tasks, such as updating names, correcting typos, or changing specific words in a text.
+// It allows you to easily modify strings without having to manually search and replace each occurrence.
+
+string friends = "Sage, David,";
+Console.WriteLine(friends);
+friends = friends.Replace("David", "Michael");
+Console.WriteLine(friends);
+
+//As i have now created a new string called friends and assigned it the value of "Sage, David,". I then used the Replace() method to replace "David" with "Michael" in the string. The result is stored back in the same variable friends. Finally, I printed the updated string to the console, which now shows "Sage, Michael,".
+// This demonstrates how to modify a string and update its value using the Replace() method. The output will be "Sage, Michael,".
+
+
+string friends = "Sage, David,";
+Console.WriteLine(friends.ToUpper());
+
+// make it all upper case
+
+System.Console.WriteLine(friends.ToLower());
+// make it all lower case
+
+System.Console.WriteLine(friends.Length);
+// get the length of the string
+
+System.Console.WriteLine(friends.StartsWith("David"));
+// check if the string starts with "David" True or False value given

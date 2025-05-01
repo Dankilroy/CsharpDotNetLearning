@@ -1,0 +1,19 @@
+//specify the data source
+List<int> scores = [75, 89, 95, 77, 82];
+
+
+
+// Define the query expression
+IEnumerable<int> scoreQuery =
+from score in scores
+where score > 80
+select score;
+
+// Exuecute the query and display the results
+foreach (int i in scoreQuery)
+{
+    Console.WriteLine(i + " ");
+}
+
+//
+// The above code creates a list of integers called scores and initializes it with five numbers: 75, 89, 95, 77, and 82. Then, it defines a LINQ query expression that selects only the scores greater than 80. Finally, it executes the query and prints each selected score to the console. The output will be:

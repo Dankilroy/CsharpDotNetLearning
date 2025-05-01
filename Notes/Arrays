@@ -1,0 +1,57 @@
+// Declaration with initialization
+int[] numbers = new int[5]; // Creates array of 5 integers (all 0)
+string[] names = new string[3]; // Creates array of 3 strings (all null)
+
+// Declaration with values
+int[] scores = new int[] { 75, 89, 95, 77, 82 };
+string[] days = { "Monday", "Tuesday", "Wednesday" }; // Shorthand syntax
+
+// Accessing elements (zero-based index)
+int secondScore = scores[1]; // Gets 89
+names[0] = "Alice"; // Assigns "Alice" to first element
+
+// Array properties
+int length = scores.Length; // Gets 5
+
+// Multi-dimensional arrays
+int[,] matrix = new int[3, 2]; // 3 rows, 2 columns
+int[,] grid = { { 1, 2 }, { 3, 4 }, { 5, 6 } }; // 3x2 matrix
+matrix[0, 1] = 10; // Sets element at row 0, column 1
+
+// Jagged arrays (
+
+
+ToGet a Range of a Array
+var names = new List<string> { "David", "Sage", "Maria" };
+names.Add("Michael");
+names.Remove("Sage");
+
+foreach (var name in names[2..4])
+{
+    Console.WriteLine($"Hello {name}!");
+}
+
+// This gets you the 2nd 3rd value in the array.
+// The .. operator is used to specify a range of indices in the array. In this case, it gets the elements at index 2 and 3 (the 3rd and 4th elements) from the names list. The output will be:
+
+
+
+array of strings
+
+
+var names = new string[] { "David", "Dan", "Jim" };
+foreach (var name in names)
+{
+    Console.WriteLine($"Hello {name}!");
+}
+
+With arrays you can add more things to an existing array. Instead you need to make a new array.
+To do this do:
+
+var names = new string[] { "David", "Dan", "Jim" };
+
+names = [.. names, "Damian"];
+foreach (var name in names)
+{
+    Console.WriteLine($"Hello {0}!");
+}

@@ -1,0 +1,65 @@
+int a = 18;
+int b = 6;
+int c = a + b;
+
+Console.WriteLine(c);
+// Adds the two integers a and b together and stores the result in c. The Console.WriteLine(c) statement prints the value of c to the console, which is the sum of a and b. In this case, it will output 24.
+
+int a = 21000000000;
+int b = 21000000000;
+long c = a + b;
+
+Console.WriteLine(c);
+
+// The above code will not work as the int data type has a maximum value of 2,147,483,647. When you try to add two integers that exceed this limit, it will result in an overflow error. To fix this, you can use the long data type, which has a larger range and can handle larger numbers. By changing the variables a and b to long, the addition will work correctly without any overflow errors.
+
+
+int a = 21000000000;
+int b = 21000000000;
+long c = (long)a + (long)b;
+
+Console.WriteLine(c);
+
+// The above code will work correctly as it explicitly casts the int variables a and b to long before performing the addition. This ensures that the addition is done using the long data type, which can handle larger numbers without overflow. The result will be stored in the long variable c, and it will print the correct sum of a and b to the console.
+
+int a = 21000000000;
+int b = 21000000000;
+long c = checked(a + b);
+// this will throw an overflow exception rather than wrapping around to a negative number. You can use the checked keyword to enable overflow checking for arithmetic operations. This way, if the result exceeds the maximum value of the int data type, an OverflowException will be thrown instead of wrapping around to a negative number. This is useful for catching potential errors in your code and ensuring that you handle large numbers correctly.
+
+bigint a = 21000000000;
+bigint b = 21000000000;
+bigint c = a + b;
+// The above code will work correctly as it uses the bigint data type, which can handle arbitrarily large integers. The addition of two bigint variables a and b will not result in an overflow, and the result will be stored in the bigint variable c. This allows you to work with very large numbers without worrying about overflow errors.
+// The bigint data type is useful for applications that require high precision arithmetic or need to handle large integers, such as cryptography or scientific calculations. It provides a way to perform arithmetic operations on numbers that exceed the limits of standard integer types like int or long.
+
+double a = 42.6;
+double b = 18.4;
+double c = a + b;
+Console.WriteLine(c);
+
+// The above code will work correctly as it uses the double data type, which can handle decimal numbers. The addition of two double variables a and b will result in a decimal value, and the result will be stored in the double variable c. This allows you to perform arithmetic operations on floating-point numbers without any issues. The Console.WriteLine(c) statement will print the sum of a and b to the console, which in this case will be 61.0.
+// The double data type is useful for applications that require high precision arithmetic or need to handle decimal numbers, such as financial calculations or scientific computations. It provides a way to represent real numbers with a certain level of precision and allows for arithmetic operations on those numbers.
+
+float a = 42.6f;
+float b = 18.4f;
+float c = a + b;
+Console.WriteLine(c);
+// The above code will work correctly as it uses the float data type, which can handle decimal numbers with less precision than double. The addition of two float variables a and b will result in a decimal value, and the result will be stored in the float variable c. This allows you to perform arithmetic operations on floating-point numbers without any issues. The Console.WriteLine(c) statement will print the sum of a and b to the console, which in this case will be 61.0f.
+// The float data type is useful for applications that require less precision and can save memory compared to double. However, it is important to note that float has a smaller range and less precision than double, so it may not be suitable for all applications. If you need higher precision or a larger range, you should use double instead of float.
+//float needs the f at the end of the number to indicate that it is a float literal. Without the f, the number is treated as a double by default. This is important to remember when working with float variables in C#.
+
+double a = 42.6;
+float b = 18.8f;
+double c = a + b;
+Console.WriteLine(c);
+// This will equal 61.4 but to a longer number. Instead use Decimal to get the exact number.
+
+decimal a = 42.6m;
+decimal b = 18.8m;
+decimal c = a + b;
+Console.WriteLine($"The answer to this is {c}");
+// This will equal 61.4 exactly. The decimal data type is useful for financial calculations or situations where precision is critical, as it provides a higher level of accuracy than float or double. The m suffix indicates that the number is a decimal literal, which is important to remember when working with decimal variables in C#.
+// The decimal data type is particularly useful for applications that require high precision arithmetic, such as financial calculations, currency conversions, or scientific computations. It provides a way to represent real numbers with a high level of accuracy and allows for arithmetic operations on those numbers without the risk of rounding errors that can occur with float or double.
+// The decimal data type is also useful for applications that require fixed-point arithmetic, such as accounting or financial applications, where rounding errors can lead to significant discrepancies in calculations. It provides a way to perform arithmetic operations on numbers with a high level of precision and accuracy, making it a preferred choice for many financial and scientific applications.
+
